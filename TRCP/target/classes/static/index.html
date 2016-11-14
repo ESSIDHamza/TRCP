@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRCP</title>
+
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+ -->
+ <script src = "assets/js/angular.js"></script>
+ <script src="assets/js/angular-animate.js"></script>
+  <script src="assets/js/ui-bootstrap-tpls-1.3.3.js"></script>
+
+
+
+
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+
+  <link rel="icon" type="image" href="assets/images/icon_uib.gif" />
+   <link rel="stylesheet" type="text/css" href="assets/css/ngDialog-theme-default.min.css">
+   <script type="text/javascript" src="assets/js/ngDialog.min.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="assets/css/ngDialog.min.css">
+  <script type="text/javascript" src="assets/js/angular-route.min.js"></script>
+  <script type="text/javascript" src="assets/js/scriptProduitService.js"></script>
+
+
+
+
+
+</head>
+<body>
+
+  <div ng-app = "ProduitManagement" >
+    <div id="navbarContent" ng-include="'navbar.html'" ></div>
+    <div ng-include="'login.html'" ></div>
+    <div ng-include="'test.html'" hidden=""></div>
+    <div id="bodyContent" style="margin: 5%;" ng-view ></div>
+<!--     <div id="bodyContent" ng-include = "'sidebarSup.html'" ></div> -->
+<!--     <div id="bodyContent" ng-include = "'modifierAgence.html'" ></div> -->
+<!--     <div id="bodyContent" ng-include = "'listeDemandesValideesAgence.html'" ></div> -->
+  </div>
+
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>

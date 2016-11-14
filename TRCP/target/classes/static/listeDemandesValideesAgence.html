@@ -1,0 +1,48 @@
+<div ng-controller="ProduitService" >
+	<h1>Liste des demandes à traiter</h1>
+	<div class="col-lg-3">
+		<input id="ref" type="text" class="form-control" placeholder="rechercher" ng-model="search" >	
+	</div>
+
+	<button ng-click="getDemandesValAgences()" class="btn btn-info">
+		<i class="glyphicon glyphicon-search"></i>
+		Demandes à traiter
+	</button>
+
+	<button ng-click="genererFichIntegration()" class="btn btn-success" style="float: right;">
+		<i class="glyphicon glyphicon-file"></i>
+		Générer fichier d'intégration
+	</button>
+
+
+	<br> <br>
+	<h4 style="float: right; color: crimson">{{nbrDemATraiter}}</h4>
+	<br><br>
+	<table class="table table-hover" >
+		<tr>
+			<td>Référence demande</td>
+			<td>Date traitement agence</td>
+			<td>Fiche client</td>
+			<td>Comptes client</td>
+			<td>Nom&Prenom client</td>
+			<td>Code agence</td>
+			<td>action</td>
+		</tr>  
+		<tr ng-repeat="demande in demandes | filter:search" ng-if="!isTraitee(demande)">  
+				<td>{{demande.referenceDemande}}</td>  
+				<td>{{demande.dateValidationAgence}}</td>
+				<td>{{demande.informationsExternes.fiche}}</td>
+				<td>{{demande.informationsExternes.comptes}}</td>   
+				<td>{{demande.informationsExternes.nomEtPrenom}}</td>
+				<td>{{demande.informationsExternes.codeAgence}}</td>  
+				
+				<td>
+					<a ng-click="getInfoProduitDemandeBO(demande)" href="#traiterBO" class="btn btn-success">
+						<i class="glyphicon glyphicon-plus"></i>
+						Traiter
+					</a> 
+				</td>
+		</tr>
+	</table>     
+
+</div>

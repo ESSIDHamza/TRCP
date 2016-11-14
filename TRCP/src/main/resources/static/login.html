@@ -1,0 +1,75 @@
+<style type="text/css">
+
+	.login {
+			background-color: #eee;
+			margin: 5%;
+			padding: 3% 25%	;
+			border-radius: 3px;
+
+		}
+	
+	.infos{
+	    padding-left: 1%;
+	    margin-top: 2%;
+	}
+
+	.nom {
+		padding-left: 12%
+	}
+
+	.compteClient {
+		padding-left: 1%;
+	}
+</style>
+	<!-- login box-->
+	<div class="login"  ng-controller="ProduitService" >
+		<form class="form-horizontal">
+			<fieldset>
+				<!-- Text input-->
+				<div class="form-group">
+					  
+					<div class="col-md-4">
+						<input type="text" placeholder="Fiche client" class="form-control input-md" >
+					</div>
+					
+					<div class="col-md-4">
+						<input type="text" placeholder="Compte client" class="form-control input-md" >
+					</div>
+				</div>
+
+				<!-- Button -->
+				<div class="form-group">
+					<label class="control-label" for="singlebutton"></label>
+					<div class="col-md-4">
+						<button id="singlebutton" name="singlebutton" class="btn btn-danger">OK</button>
+					</div>
+				</div>
+
+			</fieldset>
+		</form>
+
+		<br>
+
+		<div class="infos">
+			<table class="table">
+				<tr>
+					<td><label>Nom : </label></td>
+					<td><span>Flen Ben Flen</span></td>
+				</tr>
+			
+				<br>
+
+				<tr>
+					<td><label>Fiche client : </label></td>
+					<td><span>**********</span></td>
+				</tr>
+
+				<br>
+
+				<tr>
+					<td><label>Compte client : </label></td>
+					<td><span>**********</span></td>
+				</tr>
+			</table>
+		</div>
+	</div>

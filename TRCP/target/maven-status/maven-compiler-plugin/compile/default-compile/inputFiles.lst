@@ -1,0 +1,12 @@
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\TRCPApplication.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\controlleur\GestionConditionsPreferentiellesController.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\metier\EnvoiMail.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\modeles\Demande.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\dao\GestionDemandeRepository.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\metier\GestionConditionsPreferentielles.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\modeles\InformationsExternes.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\dao\GestionOutputOperationRepository.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\metier\GenerationDUD_PDF.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\modeles\OutputOperation.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\dao\GestionInformationsExternesRepository.java
+C:\Users\Hamza\workspace\TRCP\src\main\java\application\modeles\Mail.java

@@ -1,0 +1,363 @@
+<style type="text/css">
+	.inputFile {
+		font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3f88b8;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+    	// process the form
+    	$('#validerDUD').submit(function(event) {
+
+        // stop the form from submitting the normal way and refreshing the page
+        event.preventDefault();
+        return false;
+    });
+
+    	function testSubmit(){
+    		//event.preventDefault();
+        	return false;
+    };
+
+});
+</script>
+
+<div  >
+	<h1>Modifier / Valider</h1>
+
+	<!-- <button ng-click="getInfoProduitDemande(referenceDemande)" class="btn btn-success">Chercher demande</button> -->
+	
+	<a href="#addProduit/{{referenceDemande}}"  class="btn btn-warning">
+		<i class="glyphicon glyphicon-plus-sign"></i>
+		Ajouter produit
+	</a>
+
+	<a ng-click="deleteDemande()" class="btn btn-danger" href="#listeDemandes" >
+		<i class="glyphicon glyphicon-trash"></i>
+		Supprimer demande
+	</a>
+
+	<a ng-click="validerAgence()" class="btn btn-info" href="#saisir">
+		<i class="glyphicon glyphicon-saved"></i>
+		Valider demande
+	</a> 
+	
+	<a ng-click="getCheminPDF(DemandeForm)" href="#test1" class="btn btn-primary">
+		<i class="glyphicon glyphicon-print"></i>
+		Editer demande</a> 
+
+	<br><br><br><br><br>
+
+	<div class="col-lg-6">
+		<!-- <label class="btn btn-primary">Rattacher pdf DUD
+			<input type="file" id="fichier" class="btn btn-primary" style="display: none" ng-model="pdf"/>
+		</label>
+		<button ng-click="rattacherDUD(DemandeForm.referenceDemande,pdf)">valider</button> -->
+
+
+
+		<!-- voir funtion rattacher pdf -->
+
+		<script type="text/javascript">
+		    	function testSubmit(){
+    		//event.preventDefault();
+        	return false;
+    	};
+		</script>
+
+		<form id="validerDUD" action="{{actionPost}}" method="POST" enctype="multipart/form-data" class="form-inline" onsubmit="event.preventDefault();" >
+			<label class="btn btn-primary">
+				<i class="glyphicon glyphicon-import"></i>
+				Rattacher pdf DUD
+				<input type="file" name="fichier" class="btn btn-primary" style="display: none" disabled />
+			</label>
+			<input type="submit" class="btn btn-primary" value="valider" disabled />
+		</form>
+	</div>
+
+	<br><br><br>
+
+	<table class="table table-hover" ng-if="testNotKitNotPlacement()">
+		<tr>
+			<td>Opération</td>
+			<td>Tarif standard</td>
+			<td>Tarif accordé</td>
+			<td>Echéance accordée</td>
+			<td>Action</td>
+		</tr> 
+		<tr ng-repeat="produit in produits">  
+			<td style="width: 35%;">{{produit.operation}}</td>
+
+			<td>{{produit.tarifStandard}}</td>
+
+			<td>{{produit.tarifAccorde}}</td>
+
+			<td>{{produit.echeanceAccordee}}</td>
+
+			<td>
+				<button ng-click="deleteProduit(produit)" class="btn btn-danger">
+					<i class="glyphicon glyphicon-trash"></i>
+					Supprimer
+				</button>
+			</td>
+
+		</tr>
+	</table>
+	
+	<table class="table table-hover" ng-if="testKitEtPlacement()">
+		<tr>
+			<td>Opération</td>
+			<td>Tarif standard</td>
+			<td>Tarif accordé</td>
+			<td>Echéance accordée</td>
+			<td>Montant placement</td>
+			<td>Nb jours placement</td>
+			<td>Pourcentage kit</td>
+			<td>Action</td>
+		</tr> 
+		<tr ng-repeat="produit in produits">  
+			<td style="width: 35%;">{{produit.operation}}</td>
+
+			<td>{{produit.tarifStandard}}</td>
+
+			<td>{{produit.tarifAccorde}}</td>
+
+			<td>{{produit.echeanceAccordee}}</td>
+
+			<td>{{produit.montantPlacement}}</td>
+
+			<td>{{produit.nbrJoursPlacement}}</td>
+
+			<td>{{produit.pourcentageKit}}</td>
+
+			<td>
+				<button ng-click="deleteProduit(produit)" class="btn btn-danger">
+					<i class="glyphicon glyphicon-trash"></i>
+					Supprimer
+				</button>
+			</td>
+
+		</tr>
+	</table>
+	
+	<table class="table table-hover" ng-if="testIfPlacement()" >
+		<tr>
+			<td>Opération</td>
+			<td>Tarif standard</td>
+			<td>Tarif accordé</td>
+			<td>Echéance accordée</td>
+			<td>Montant placement</td>
+			<td>Nb jours placement</td>
+			<td>Action</td>
+		</tr>  
+		
+		<tr ng-repeat="produit in produits" >  
+			<td style="width: 35%;">{{produit.operation}}</td>
+
+			<td>{{produit.tarifStandard}}</td>
+
+			<td>{{produit.tarifAccorde}}</td>
+
+			<td>{{produit.echeanceAccordee}}</td>
+
+			<td>{{produit.montantPlacement}}</td>
+
+			<td>{{produit.nbrJoursPlacement}}</td>
+
+			<td>
+				<button ng-click="deleteProduit(produit)" class="btn btn-danger">
+					<i class="glyphicon glyphicon-trash"></i>
+					Supprimer
+				</button>
+			</td>
+			
+		</tr>
+	</table>
+
+	<table class="table table-hover" ng-if="testIfKit()">
+		<tr>
+			<td>Opération</td>
+			<td>Tarif standard</td>
+			<td>Tarif accordé</td>
+			<td>Echéance accordée</td>
+			<td>Pourcentage kit</td>
+			<td>Action</td>
+		</tr>  
+		
+		<tr ng-repeat="produit in produits"> 
+			<td style="width: 35%;">{{produit.operation}}</td>
+
+			<td>{{produit.tarifStandard}}</td>
+
+			<td>{{produit.tarifAccorde}}</td>
+
+			<td>{{produit.echeanceAccordee}}</td>
+
+			<td>{{produit.pourcentageKit}}</td>
+
+			<td>
+				<button ng-click="deleteProduit(produit)" class="btn btn-danger">
+					<i class="glyphicon glyphicon-trash"></i>
+					Supprimer
+				</button>
+			</td>
+			
+		</tr>
+	</table>
+ 
+
+
+
+<!--
+	<table class="table table-hover" >
+		<tr>
+			<td>Opération</td>
+			<td>Tarif standard</td>
+			<td>Tarif accordé</td>
+			<td>Echéance accordée</td>
+			<td>Montant placement</td>
+			<td>Nb jours placement</td>
+			<td>Pourcentage kit</td>
+			<td>Action</td>
+		</tr>  
+		
+		<tr ng-repeat="produit in produits">  
+			<!-- <div class="generic">
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.id"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.assiette"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.indexTarif"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.typeValeur"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.nbrJoursPlacement"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.pourcentageKit"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.dateSaisie"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.dateDerniereModification"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.dateValidation"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.tarifSollicite"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.echeanceSollicitee"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.tarifAccorde"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.correspondance"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.fiche"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.echeanceAccordee"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.nomEtPrenom"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.codeAgence"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.compte"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.num"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.libelle"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.detailLib"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.devise"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.deviseTND_CONV"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.standard"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.montantMinPlacement"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.montantMaxPlacement"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.dureeMinPlacement"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.dureeMaxPlacement"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.valeurFixeKitTTC"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.codeOperation"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.nature"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.valeur"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.observation"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.pack"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.produit"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.niveauForcage"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.enPlus"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.enMoins"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.correspondanceAlgo"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.valeurAlgoClt"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.indexValeurAlgo"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.tarifsPreferentielsAlgo"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.indexTarifAlgo"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.valeurAlgo"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.ttcouHT"  >
+				<input type="hidden" class="form-control" placeholder="referenceProduit" value="produit.referenceProduit" ng-model="produit.dr"  >
+			</div> -->
+
+			<!-- <div class="placement" ng-if="testIfPlacement(produit.referenceProduit)">
+				<td style="width: 35%;">{{produit.operation}}</td>
+
+				<td>{{produit.tarifStandard}}</td>
+
+				<td>{{produit.tarifAccorde}}</td>
+
+				<td>{{produit.echeanceAccordee}}</td>
+
+				<td ng-if="testIfPlacement(produit.referenceProduit)">
+					{{produit.montantPlacement}}
+				</td>
+
+				<td ng-if="testIfPlacement(produit.referenceProduit)">
+					{{produit.nbrJoursPlacement}}
+				</td>
+
+				<button ng-click="deleteProduit(produit)" class="btn btn-danger">Supprimer</button>
+			</div>
+
+			<div class="kit" ng-if="testIfKit(produit.referenceProduit)" >
+				<td style="width: 35%;">{{produit.operation}}</td>
+
+				<td>{{produit.tarifStandard}}</td>
+
+				<td>{{produit.tarifAccorde}}</td>
+
+				<td>{{produit.echeanceAccordee}}</td>
+
+				<td>{{produit.pourcentageKit}}</td>
+
+				<button ng-click="deleteProduit(produit)" class="btn btn-danger">Supprimer</button>
+			</div> -->
+<!--
+			<div class="NotKitNotPlacement" ng-if="testNotKitNotPlacement(produit.referenceProduit)" >
+				<td style="width: 35%;">{{produit.operation}}</td>
+
+				<td>{{produit.tarifStandard}}</td>
+
+				<td>{{produit.tarifAccorde}}</td>
+
+				<td>{{produit.echeanceAccordee}}</td>
+
+				<button ng-click="deleteProduit(produit)" class="btn btn-danger">Supprimer</button>
+			</div>
+			<!-- <div class="generic">		
+				
+				<td style="width: 35%;">{{produit.operation}}</td>
+
+				<td>{{produit.tarifStandard}}</td>
+
+				<td>{{produit.tarifAccorde}}</td>
+
+				<td>{{produit.echeanceAccordee}}</td>
+			</div>
+
+			<div class="placement">
+				<td ng-if="testIfPlacement(produit.referenceProduit)">
+					{{produit.montantPlacement}}
+				</td>
+
+				<td ng-if="testIfPlacement(produit.referenceProduit)">
+					{{produit.nbrJoursPlacement}}
+				</td>
+			</div>
+			<div class="notPlacement">				
+				<td ng-if="!testIfPlacement(produit.referenceProduit)"></td>
+				<td ng-if="!testIfPlacement(produit.referenceProduit)"></td>
+
+				<td ng-if="testIfKit(produit.referenceProduit)">
+					{{produit.pourcentageKit}}
+				</td>
+
+				<td ng-if="!testIfKit(produit.referenceProduit)"></td>
+			</div>
+
+			<td ng-if="!DemandeForm.valideeBO">
+					<!-- <a ng-click="editDemandeProduit(produit)" class="btn btn-success">Modifier</a>  --> 
+				<!--<button ng-click="deleteProduit(produit)" class="btn btn-danger">Supprimer</button>
+			</td>   --><!--
+		</tr>  
+	</table>     
+-->
+</div>

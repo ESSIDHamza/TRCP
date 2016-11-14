@@ -1,0 +1,41 @@
+<div ng-controller="ProduitService" >
+	<h1>Liste demandes</h1>
+	
+
+	<button ng-click="getAllDemandes()" class="btn btn-info">
+		<i class="glyphicon glyphicon-search"></i>
+		Trouver les demandes
+	</button>
+	
+	<div class="col-lg-3" ng-if="showInputRecherche()">
+		<input id="ref" type="text" class="form-control" placeholder="rechercher" ng-model="search" >
+
+	</div>
+
+	<br> <br>
+
+	<table class="table table-hover" >
+		<tr>
+			<td>Référence demande</td>
+			<td>Fiche client</td>
+			<td>Comptes client</td>
+			<td>Nom&Prenom client</td>
+			<td>Date traitement agence</td>
+			<td>Action</td>
+		</tr>  
+		<tr ng-repeat="demande in demandes | filter:search">  
+				<td>{{demande.referenceDemande}}</td>  
+				<td>{{demande.informationsExternes.fiche}}</td>
+				<td>{{demande.informationsExternes.comptes}}</td>
+				<td>{{demande.informationsExternes.nomEtPrenom}}</td>  
+				<td>{{demande.dateSaisie}}</td>   
+				<td>
+					<a ng-click="getInfoProduitDemande(demande)" href="#modifier" class="btn btn-success">
+						<i class="glyphicon glyphicon-plus"></i>
+						Traiter
+					</a> 
+				</td>
+		</tr>
+	</table>     
+
+</div>

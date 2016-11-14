@@ -1,0 +1,5270 @@
+<style type="text/css">
+.produits {
+	margin: 0 4%;
+}
+
+#SubSubMenuIA1, #SubMenuIA, #demo1, #SubMenuIB {
+	padding-left: 7%;
+}
+
+form > .form-control {
+	font-size: 12px;
+}
+</style>
+<div class="produits" ng-controller="ProduitService">
+	<div id="MainMenu">
+
+		<div class="list-group panel col-lg-3">
+			<!-- I- OPERATIONS DOMESTIQUES -->
+			<a href="#demo1" class="list-group-item list-group-item-danger"
+				data-toggle="collapse" data-parent="#MainMenu"> I- OPERATIONS
+				DOMESTIQUES </a>
+			<div class="collapse" id="demo1">
+				<!-- A- Financement à court terme -->
+				<a href="#IA" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIA"> A- Financement
+					à court terme </a>
+
+				<!--  B- Placements : Compte à terme, Bon de caisse, Compte à Echéance Variable -->
+				<a href="#SubMenuIB" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIB"> B- Placements
+					: Compte à terme, Bon de caisse, Compte à Echéance Variable <i
+					class="fa fa-caret-down"></i>
+				</a>
+				<div class="collapse list-group-submenu" id="SubMenuIB">
+					<a href="#IB1" class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubMenuIB"> B-1- Compte à
+						terme en Dinars </a> <a href="#IB2"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubMenuIB"> B-2- Compte à
+						terme en Dinars convertibles </a> <a href="#IB3"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubSubMenuIB3"> B-3- Bon
+						de caisse en Dinars </a> <a href="#IB4"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubSubMenuIB4"> B-4- Bon
+						de caisse en Dinars convertibles </a> <a href="#IB5"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubSubMenuIB5"> B-5-
+						Compte à échéance variable </a>
+				</div>
+
+
+				<!--  C- Opérations sur effets -->
+				<a href="#IC" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIC"> C- Opérations
+					sur effets </a>
+
+				<!--  D- Opérations par chèque en dinars ou dinars convertibles -->
+				<a href="#ID" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuID"> D- Opérations
+					par chèque en dinars ou dinars convertibles </a>
+
+				<!--  E- Opérations virements domestiques & prélèvement -->
+				<a href="#IE" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIE"> E- Opérations
+					virements domestiques & prélèvement </a>
+
+				<!--  F- Autres opérations domestiques (retrait, versement, extrait) -->
+				<a href="#IF" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIF"> F- Autres
+					opérations domestiques (retrait, versement, extrait) </a>
+
+
+				<!--  G- Location de coffre-fort -->
+				<a href="#IG" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIG"> G- Location de
+					coffre-fort </a>
+
+
+				<!--  H- Offres packagées -->
+				<a href="#IH" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIH"> H- Offres
+					packagées </a>
+
+
+				<!--  I- Banque à distance -->
+				<a href="#Ii" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIi"> I- Banque à
+					distance <i class="fa fa-caret-down"></i>
+				</a>
+				<div class="collapse list-group-submenu" id="SubMenuIi">
+					<a href="#Ii1" class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubMenuIi"> I-1-
+						MESSA’GEK Pro (SMS Banking pour CLICOM) </a> <a href="#Ii2"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubMenuIi"> I-2- UIBnet
+						(Internet Banking pour CLIPRI) </a> <a href="#Ii3"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubMenuIi"> I-3- UIBnet
+						Pro (Internet Banking pour CLIPRO et CLICOM) </a> <a href="#Ii4"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubMenuIi"> I-4-
+						UIB@NKING </a> <a href="#Ii5"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubMenuIi"> I-5- EXTRANET
+						(Banque Electronique pour CLICOM) </a> <a href="#Ii6"
+						class="list-group-item list-group-item-info"
+						data-toggle="collapse" data-parent="#SubMenuIi"> I-6- UIBSWIFT
+					</a>
+				</div>
+
+
+				<!-- J- Bancassurance -->
+				<a href="#IJ" class="list-group-item list-group-item-warning"
+					data-toggle="collapse" data-parent="#SubMenuIJ"> J-
+					Bancassurance </a>
+			</div>
+
+
+			<!-- II- OPERATIONS EN DEVISES -->
+			<a href="#demo2" class="list-group-item list-group-item-danger"
+				data-toggle="collapse" data-parent="#MainMenu"> II- OPERATIONS
+				EN DEVISES </a>
+			<div class="collapse" id="demo2">
+				<!--  -->
+				<a href="#SubMenu1" class="list-group-item" data-toggle="collapse"
+					data-parent="#SubMenu1"> Subitem 1 <i class="fa fa-caret-down"></i>
+				</a>
+				<div class="collapse list-group-submenu" id="SubMenu1">
+					<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem
+						1 a</a> <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem
+						2 b</a> <a href="#SubSubMenu1" class="list-group-item"
+						data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c
+						<i class="fa fa-caret-down"></i>
+					</a>
+					<div class="collapse list-group-submenu list-group-submenu-1"
+						id="SubSubMenu1">
+						<a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub
+							sub item 1</a> <a href="#" class="list-group-item"
+							data-parent="#SubSubMenu1">Sub sub item 2</a>
+					</div>
+					<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem
+						4 d</a>
+				</div>
+				<!--  -->
+				<a href="javascript:;" class="list-group-item">Subitem 2</a>
+				<!--  -->
+				<a href="javascript:;" class="list-group-item">Subitem 3</a>
+			</div>
+
+
+			<!-- III- Avals, cautions, acceptations bancaires et autres engagement par signature (Dinars et devises) -->
+			<a href="#demo3" class="list-group-item list-group-item-danger"
+				data-toggle="collapse" data-parent="#MainMenu"> II- OPERATIONS
+				EN DEVISES </a>
+			<div class="collapse" id="demo3">
+				<!--  -->
+				<a href="#SubMenu1" class="list-group-item" data-toggle="collapse"
+					data-parent="#SubMenu1"> Subitem 1 <i class="fa fa-caret-down"></i>
+				</a>
+				<div class="collapse list-group-submenu" id="SubMenu1">
+					<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem
+						1 a</a> <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem
+						2 b</a> <a href="#SubSubMenu1" class="list-group-item"
+						data-toggle="collapse" data-parent="#SubSubMenu1">Subitem 3 c
+						<i class="fa fa-caret-down"></i>
+					</a>
+					<div class="collapse list-group-submenu list-group-submenu-1"
+						id="SubSubMenu1">
+						<a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub
+							sub item 1</a> <a href="#" class="list-group-item"
+							data-parent="#SubSubMenu1">Sub sub item 2</a>
+					</div>
+					<a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem
+						4 d</a>
+				</div>
+				<!--  -->
+				<a href="javascript:;" class="list-group-item">Subitem 2</a>
+				<!--  -->
+				<a href="javascript:;" class="list-group-item">Subitem 3</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- forms -->
+	<div class="col-lg-9 ">
+		<!-- A- Financement à court terme -->
+		<div id="IA" hidden="">
+			<legend style="color: #286090;"> I- OPERATIONS DOMESTIQUES >
+				A-Financement à court terme </legend>
+			<div class="IA1">
+				<!-- A-1- Escompte d'effets de transactions (Montant < ou = 90 jrs) -->
+				<div
+					class="A-1- Escompte d'effets de transactions (Montant < ou = 90 jrs)">
+					<h4 style="text-decoration: underline; color: #a94442;">A-1-
+						Escompte d'effets de transactions (Montant < ou = 90 jrs)</h4>
+					<br> <br> <br>
+					<!-- A-1-1- Avalisé par une banque (sans dépassement d'échéance) -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Avalisé par
+						une banque (sans dépassement d'échéance)
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[0].operation"
+								ng-init="tab[0].operation='OPERATIONS DOMESTIQUES > Financement à court terme > Escompte d effets de transactions (Montant < ou = 90 jrs) > Avalis&eacute; par une banque (sans d&eacute;passement d &eacute;ch&eacute;ance)'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="TMM + 3,75"
+									ng-model="tab[0].tarifStandard" readonly>
+							</div>
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" step="0.001"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[0].valeur" required="">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input type="date"
+									placeholder="" class="form-control"
+									ng-model="tab[0].echeanceSollicitee" required="">
+
+							</div>
+						</div>
+
+						<button class="btn btn-success"	ng-click="addProduitToList(0,'A160-A161-A162-A163-A164-A165-A166','%','HT','TMM + 3,75')">Ajouter produit</button>
+					</form>
+
+					<br> <br>
+
+					<!-- A-1-2- Non avalisé par une banque (sans dépassement d'échéance) -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Non avalisé
+						par une banque (sans dépassement d'échéance)
+					</label>
+					<form>
+						<div class="row form-group">
+
+							<input ng-model="tab[1].operation"
+								ng-init="tab[1].operation='OPERATIONS DOMESTIQUES > Financement à court terme > Escompte d effets de transactions (Montant < ou = 90 jrs) > Non avalis&eacute; par une banque (sans d&eacute;passement d &eacute;ch&eacute;ance)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="TMM + 4"
+									ng-model="tab[1].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" step="0.001"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[1].valeur" required="">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[1].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success"	ng-click="addProduitToList(1,'A132-A133-A134-A135-A136-A137-A138','%','HT','TMM + 4')">Ajouter produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+			<div class="IA2">
+				<!-- A-2-Escompte d'effets de transactions (90 jrs < Montant < ou = 180 jrs) -->
+				<div
+					class="A-2-Escompte d'effets de transactions (90 jrs < Montant < ou = 180 jrs)">
+					<h4 style="text-decoration: underline; color: #a94442;">A-2-Escompte
+						d'effets de transactions (90 jrs < Montant < ou = 180 jrs)</h4>
+					<br> <br> <br>
+					<!-- A-2-1- Avalisé par une banque (sans dépassement d'échéance) -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Avalisé par
+						une banque (sans dépassement d'échéance)
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[2].operation"
+								ng-init="tab[2].operation='OPERATIONS DOMESTIQUES > Financement à court terme > Escompte d effets de transactions (90 jrs < Montant < ou = 180 jrs) > Avalis&eacute; par une banque (sans d&eacute;passement d &eacute;ch&eacute;ance'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="TMM + 4"
+									ng-model="tab[2].tarifStandard" readonly>
+							</div>
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[2].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input type="date"
+									placeholder="" class="form-control"
+									ng-model="tab[2].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(2,'A167-A168-A169-A170-A171-A172-A173','%','HT','TMM + 4')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+
+					<!-- A-2-2- Non avalisé par une banque (sans dépassement d'échéance) -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Non avalisé
+						par une banque (sans dépassement d'échéance)
+					</label>
+					<form>
+						<div class="row form-group">
+
+							<input ng-model="tab[3].operation"
+								ng-init="tab[3].operation='OPERATIONS DOMESTIQUES > Financement à court terme > Escompte d effets de transactions (90 jrs < Montant < ou = 180 jrs) > Non avalis&eacute; par une banque (sans d&eacute;passement d &eacute;ch&eacute;ance)'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="TMM + 4,25"
+									ng-model="tab[3].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[3].valeur"
+										>
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[3].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(3,'A139-A140-A141-A142-A143-A144-A145','%','HT','TMM + 4,25')">Ajouter
+							produit</button>
+					</form>
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- B-1- Compte à terme en Dinars : -->
+		<div id="IB1" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				B- Placements : Compte à terme, Bon de caisse, Compte à Echéance
+				Variable > B-1- Compte à terme en Dinars</legend>
+			<!--  IB-1-1 -->
+			<div class="IB11">
+				<!-- B-1-1- De 1 mD à 9,9 mD -->
+				<div class="B-1-1- De 1 mD à 9,9 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-1-1-
+						De 1 mD à 9,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[4].operation"
+								ng-init="tab[4].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > De 1 mD &aacute; 9,9 mD > De 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 1"
+									ng-model="tab[4].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[4].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du<br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[4].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[4].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[4].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(4,'D1','% +  NB Jours','HT','TMM - 1')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> 
+					<label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> 
+						<br> <br>
+					<!-- plus de 12 mois à 24 mois -->
+					<div class="row form-group" style="margin-left: 4%">
+						<input ng-model="tab[5].operation"
+							ng-init="tab[5].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > De 1 mD &aacute; 9,9 mD > Plus de 12 mois &aacute; 24 mois'"
+							hidden="">
+						<div class="col-lg-2">
+							<label>Tarif <br> Standard
+							</label> <input type="text" class="form-control" placeholder="TMM - 0,75"
+								ng-model="tab[5].tarifStandard" readonly>
+						</div>
+
+						<div class="col-lg-3">
+							<label>Tarif <br> Sollicité
+							</label>
+							<div class="input-group">
+								<div class="input-group-addon">TMM</div>
+								<input type="number" step="0.001" class="form-control"
+									placeholder="0,000" ng-model="tab[5].valeur">
+								<div class="input-group-addon">%</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2">
+							<label>Montant du <br>placement
+							</label>
+							<div class="input-group">
+								<input type="number" step="0.001" class="form-control"
+									placeholder="0,000" min="1000" max="9999"
+									ng-model="tab[5].montantPlacement">
+								<div class="input-group-addon">DT</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2">
+							<label>Nbr jours du <br>placement
+							</label> <input type="number" step="0.001" class="form-control"
+								placeholder="0,000" min="366" max="720"
+								ng-model="tab[5].nbrJoursPlacement">
+						</div>
+
+						<div class="col-lg-2">
+							<label>Echéance <br>sollicitée
+							</label> <input id="textinput" name="textinput" type="date"
+								placeholder="" class="form-control input-md"
+								ng-model="tab[5].echeanceSollicitee">
+						</div>
+					</div>
+					<button class="btn btn-success" ng-click="addProduitToList(5,'D4','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+						produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<div class="row form-group" style="margin-left: 4%">
+						<input ng-model="tab[6].operation"
+							ng-init="tab[6].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > De 1 mD &aacute; 9,9 mD > Plus de 24 mois'"
+							hidden="">
+
+						<div class="col-lg-2">
+							<label>Tarif <br> Standard
+							</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+								ng-model="tab[6].tarifStandard" readonly>
+						</div>
+
+						<div class="col-lg-3">
+							<label>Tarif <br> Sollicité
+							</label>
+							<div class="input-group">
+								<div class="input-group-addon">TMM</div>
+								<input type="number" step="0.001" class="form-control"
+									placeholder="0,000" ng-model="tab[6].valeur">
+								<div class="input-group-addon">%</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2">
+							<label>Montant du <br>placement
+							</label>
+							<div class="input-group">
+								<input type="number" step="0.001" class="form-control"
+									placeholder="0,000" min="1000" max="9999"
+									ng-model="tab[6].montantPlacement">
+								<div class="input-group-addon">DT</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2">
+							<label>Nbr jours du placement</label> <input type="number"
+								step="0.001" class="form-control" placeholder="0,000" min="721"
+								max="1800" ng-model="tab[6].nbrJoursPlacement">
+						</div>
+
+						<div class="col-lg-2">
+							<label>Echéance <br>sollicitée
+							</label> <input id="textinput" name="textinput" type="date"
+								placeholder="" class="form-control input-md"
+								ng-model="tab[6].echeanceSollicitee">
+						</div>
+					</div>
+					<button class="btn btn-success" ng-click="addProduitToList(6,'D7','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+						produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+			<!--  IB-1-2 -->
+			<div class="IB12">
+				<!-- B-1-2- De 10 mD à 99,9 mD -->
+				<div class="B-1-2- De 10 mD à 99,9 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-1-2-
+						De 10 mD à 99,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%+  NB Jours">
+							<input ng-model="tab[7].operation"
+								ng-init="tab[7].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > De 10 mD &aacute; 99,9 mD > De 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[7].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[7].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[7].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[7].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[7].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(7,'D2','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%+  NB Jours">
+							<input ng-model="tab[8].operation"
+								ng-init="tab[8].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > De 10 mD &aacute; 99,9 mD > Plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[8].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[8].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[8].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="730" ng-model="tab[8].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[8].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(8,'D5','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%+  NB Jours">
+							<input ng-model="tab[9].operation"
+								ng-init="tab[9].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > De 10 mD &aacute; 99,9 mD > Plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,25" ng-model="tab[9].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[9].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[9].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="1800" ng-model="tab[9].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[9].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(9,'D8','% +  NB Jours','HT','TMM - 0,25')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+
+			<!--  IB-1-3 -->
+			<div class="IB13">
+				<!-- B-1-3- Plus de 100 mD -->
+				<div class="B-1-3- Plus de 100 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-1-3-
+						Plus de 100 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[10].operation"
+								ng-init="tab[10].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > Plus de 100 mD  > De 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[10].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[10].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[10].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[10].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[10].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(10,'D3','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[11].operation"
+								ng-init="tab[11].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > Plus de 100 mD  > Plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,25" ng-model="tab[11].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[11].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[11].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="730" ng-model="tab[11].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[11].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(11,'D6','% +  NB Jours','HT','TMM - 0,25')">Ajouter
+							produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[12].operation"
+								ng-init="tab[12].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars > Plus de 100 mD  > Plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,125" ng-model="tab[12].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[12].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[12].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="1800" ng-model="tab[12].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[12].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(12,'D9','% +  NB Jours','HT','TMM - 0,125')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- B-2- Compte à terme en Dinars convertibles : -->
+		<div id="IB2" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				B- Placements : Compte à terme, Bon de caisse, Compte à Echéance
+				Variable > B-2- Compte à terme en Dinars convertibles</legend>
+			<!--  IB-2-1 -->
+			<div class="IB21">
+				<!-- B-2-1- De 1 mD à 9,9 mD -->
+				<div class="B-2-1- De 1 mD à 9,9 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">De 1
+						mD à 9,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[13].operation"
+								ng-init="tab[13].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > De 1 mD &aacute; 9,9 mD > De 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 1"
+									ng-model="tab[13].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[13].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du<br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[13].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[13].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[13].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(13,'D10','% +  NB Jours','HT','TMM - 1')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[14].operation"
+								ng-init="tab[14].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > De 1 mD &aacute; 9,9 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[14].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[14].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[14].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du <br>placement
+								</label> <input type="number" step="0.001" class="form-control"
+									placeholder="0,000" min="366" max="730"
+									ng-model="tab[14].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[14].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(14,'D13','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[15].operation"
+								ng-init="tab[15].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > De 1 mD &aacute; 9,9 mD > plus de 24 mois'"
+								hidden="">
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[15].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[15].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[15].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="1800" ng-model="tab[15].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[15].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(15,'D16','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+			<!--  IB-2-2 -->
+			<div class="IB22">
+				<!-- B-2-2- De 1 mD à 9,9 mD -->
+				<div class="B-2-2- De 1 mD à 9,9 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-2-2-
+						De 10 mD à 99,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[17].operation"
+								ng-init="tab[17].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > De 10 mD &aacute; 99,9 mD > De 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[17].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[17].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[17].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[17].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[17].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(17,'D11','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[18].operation"
+								ng-init="tab[18].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > De 10 mD &aacute; 99,9 mD > Plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[18].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[18].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[18].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="730" ng-model="tab[18].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[18].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(18,'D14','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[19].operation"
+								ng-init="tab[19].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > De 10 mD &aacute; 99,9 mD > Plus de 24 mois '"
+								hidden="">
+
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,25" ng-model="tab[19].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[19].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[19].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="1800" ng-model="tab[19].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[19].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(19,'D17','% +  NB Jours','HT','TMM - 0,25')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+			<!--  IB-2-3 -->
+			<div class="IB23">
+				<!-- B-2-3- Plus de 100 mD -->
+				<div class="B-2-3- Plus de 100 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-2-3-
+						Plus de 100 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[20].operation"
+								ng-init="tab[20].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > Plus de 100 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[20].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[20].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[20].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[20].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[20].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(20,'D12','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[21].operation"
+								ng-init="tab[21].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > Plus de 100 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,25" ng-model="tab[21].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[21].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[21].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="720" ng-model="tab[21].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[21].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(21,'D15','% +  NB Jours','HT','TMM - 0,25')">Ajouter
+							produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[22].operation"
+								ng-init="tab[22].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; terme en Dinars convertibles > Plus de 100 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,125" ng-model="tab[22].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[22].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[22].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="1800" ng-model="tab[22].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[22].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(22,'D18','% +  NB Jours','HT','TMM - 0,125')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- B-3- Bon de caisse en Dinars : -->
+		<div id="IB3" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				B- Placements : Compte à terme, Bon de caisse, Compte à Echéance
+				Variable > B-3 Bon de caisse en Dinars :</legend>
+			<!--  IB-3-1 -->
+			<div class="IB31">
+				<!-- B-3-1- De 1 mD à 9,9 mD -->
+				<div class="B-3-1- De 1 mD à 9,9 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">De 1
+						mD à 9,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[23].operation"
+								ng-init="tab[23].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > De 1 mD &aacute; 9,9 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 1"
+									ng-model="tab[23].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[23].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du<br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[23].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[23].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[23].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(23,'D19','% +  NB Jours','HT','TMM - 1')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[24].operation"
+								ng-init="tab[24].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > De 1 mD &aacute; 9,9 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[24].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[24].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[24].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du <br>placement
+								</label> <input type="number" step="0.001" class="form-control"
+									placeholder="0,000" min="366" max="730"
+									ng-model="tab[24].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[24].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(24,'D22','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[25].operation"
+								ng-init="tab[25].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > De 1 mD &aacute; 9,9 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[25].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[25].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[25].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="900" ng-model="tab[25].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[25].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(25,'D25','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+			<!--  IB-3-2 -->
+			<div class="IB32">
+				<!-- B-3-2- De 1 mD à 9,9 mD -->
+				<div class="B-3-2- De 1 mD à 9,9 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-3-2-
+						De 10 mD à 99,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+
+							<input ng-model="tab[27].operation"
+								ng-init="tab[27].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > De 10 mD &aacute; 99,9 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[27].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[27].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[27].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[27].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[27].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(27,'D20','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[28].operation"
+								ng-init="tab[28].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > De 10 mD &aacute; 99,9 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[28].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[28].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[28].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="730" ng-model="tab[28].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[28].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(28,'D23','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[29].operation"
+								ng-init="tab[29].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > De 10 mD &aacute; 99,9 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,25" ng-model="tab[29].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[29].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[29].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="900" ng-model="tab[29].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[29].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(29,'D26','% +  NB Jours','HT','TMM - 0,25')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+			<!--  IB-3-3 -->
+			<div class="IB23">
+				<!-- B-3-3- Plus de 100 mD -->
+				<div class="B-3-3- Plus de 100 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-3-3-
+						Plus de 100 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[30].operation"
+								ng-init="tab[30].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > Plus de 100 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[30].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[30].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[30].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[30].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[30].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(30,'D21','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[31].operation"
+								ng-init="tab[31].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > Plus de 100 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,25" ng-model="tab[31].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[31].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[31].montantPlacement">
+
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="720" ng-model="tab[31].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[31].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(31,'D24','% +  NB Jours','HT','TMM - 0,25')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[32].operation"
+								ng-init="tab[32].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars > Plus de 100 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,125" ng-model="tab[32].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[32].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[32].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="900" ng-model="tab[32].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[32].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(32,'D27','% +  NB Jours','HT','TMM - 0,125')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- B-4- Bon de caisse en Dinars convertibles : -->
+		<div id="IB4" hidden="">
+			<legend style="color: #386090;">I- OPERATIONS DOMESTIQUES >
+				B- Placements : Compte à terme, Bon de caisse, Compte à Echéance
+				Variable > B-4 Bon de caisse en Dinars convertibles :</legend>
+			<!--  IB-4-1 -->
+			<div class="IB41">
+				<!-- B-4-1- De 1 mD à 9,9 mD -->
+				<div class="B-4-1- De 1 mD à 9,9 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">De 1
+						mD à 9,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+
+							<input ng-model="tab[33].operation"
+								ng-init="tab[33].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > De 1 mD &aacute; 9,9 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 1"
+									ng-model="tab[33].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[33].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du<br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[33].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[33].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[33].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(33,'D28','% +  NB Jours','HT','TMM - 1')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[34].operation"
+								ng-init="tab[34].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > De 1 mD &aacute; 9,9 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[34].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[34].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[34].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du <br>placement
+								</label> <input type="number" step="0.001" class="form-control"
+									placeholder="0,000" min="366" max="720"
+									ng-model="tab[34].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[34].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(34,'D31','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[35].operation"
+								ng-init="tab[35].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > De 1 mD &aacute; 9,9 mD > plus de 24 mois'"
+								hidden="">
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[35].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[35].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[35].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="900" ng-model="tab[35].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[35].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(35,'D34','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+			<!--  IB-4-2 -->
+			<div class="IB42">
+				<!-- B-4-2- De 10 mD à 99,9 mD -->
+				<div class="B-3-2- De 1 mD à 9,9 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-4-2-
+						De 10 mD à 99,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[37].operation"
+								ng-init="tab[37].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > De 10 mD &aacute; 99,9 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[37].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[37].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[37].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[37].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[37].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(37,'D29','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[38].operation"
+								ng-init="tab[38].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > De 10 mD &aacute; 99,9 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[38].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[38].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[38].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="720" ng-model="tab[38].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[38].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(38,'D32','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[39].operation"
+								ng-init="tab[39].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > De 10 mD &aacute; 99,9 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,25" ng-model="tab[39].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[39].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[39].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="900" ng-model="tab[39].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[39].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(39,'D35','% +  NB Jours','HT','TMM - 0,25')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+
+			<!--  IB-4-3 -->
+			<div class="IB43">
+				<!-- B-4-3- Plus de 100 mD -->
+				<div class="B-4-3- Plus de 100 mD">
+					<h4 style="text-decoration: underline; color: #a94442;">B-4-3-3-
+						Plus de 100 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[40].operation"
+								ng-init="tab[40].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > Plus de 100 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[40].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[40].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[40].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[40].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[40].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(40,'D30','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[41].operation"
+								ng-init="tab[41].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > Plus de 100 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,25" ng-model="tab[41].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[41].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[41].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="720" ng-model="tab[41].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[41].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(41,'D33','% +  NB Jours','HT','TMM - 0,25')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 34
+						mois</label> <br> <br>
+					<!-- plus de 34 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[42].operation"
+								ng-init="tab[42].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Bon de caisse en Dinars convertibles > Plus de 100 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,125" ng-model="tab[42].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[42].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[42].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="900" ng-model="tab[42].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[42].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(42,'D36','% +  NB Jours','HT','TMM - 0,125')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- B-5- Compte à échéance variable -->
+		<div id="IB5" hidden="">
+			<legend style="color: #386090;">I- OPERATIONS DOMESTIQUES >
+				B- Placements : Compte à terme, Bon de caisse, Compte à Echéance
+				Variable > B-5 Compte à échéance variable</legend>
+			<!--  IB-5-1 -->
+			<div class="IB51">
+				<!-- B-5-1- De 1 mD à 9,9 mD -->
+				<div class="B-5-1- De 1 mD à 9,9 mD">
+					<h4 style="text-decoration: underline; color: #a94452;">De 1
+						mD à 9,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[43].operation"
+								ng-init="tab[43].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > De 1 mD &aacute; 9,9 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 1,25" ng-model="tab[43].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[43].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du<br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[43].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[43].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[43].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(43,'D37-D38','% +  NB Jours','HT','TMM - 1,25')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[44].operation"
+								ng-init="tab[44].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > De 1 mD &aacute; 9,9 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 1"
+									ng-model="tab[44].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[44].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[44].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du <br>placement
+								</label> <input type="number" step="0.001" class="form-control"
+									placeholder="0,000" min="366" max="720"
+									ng-model="tab[44].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[44].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(44,'D43-D44','% +  NB Jours','HT','TMM - 1')">Ajouter
+							produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+
+							<input ng-model="tab[45].operation"
+								ng-init="tab[45].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > De 1 mD &aacute; 9,9 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[45].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[45].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[45].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="1800" ng-model="tab[45].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[45].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(45,'D49','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+			<!--  IB-5-2 -->
+			<div class="IB52">
+				<!-- B-5-2- De 10 mD à 99,9 mD -->
+				<div class="B-5-2- De 10 mD à 99,9 mD">
+					<h4 style="text-decoration: underline; color: #a94452;">B-5-2-
+						De 10 mD à 99,9 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[47].operation"
+								ng-init="tab[47].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > De 10 mD &aacute; 99,9 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 1"
+									ng-model="tab[47].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[47].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[47].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[47].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[47].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(47,'D39-D40','% +  NB Jours','HT','TMM - 1')">Ajouter
+							produit</button>
+					</form>
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[48].operation"
+								ng-init="tab[48].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > De 10 mD &aacute; 99,9 mD > plus de 12 mois &aacute; 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[48].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[48].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[48].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="720" ng-model="tab[48].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[48].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(48,'D45-D46','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[49].operation"
+								ng-init="tab[49].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > De 10 mD &aacute; 99,9 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[49].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[49].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[49].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="1800" ng-model="tab[49].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[49].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(49,'D50','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+			<!--  IB-5-3 -->
+			<div class="IB53">
+				<!-- B-5-3- Plus de 100 mD -->
+				<div class="B-5-3- Plus de 100 mD">
+					<h4 style="text-decoration: underline; color: #a94452;">B-5-3-3-
+						Plus de 100 mD</h4>
+
+					<br> <br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> de 3 à 12 mois</label>
+					<br> <br>
+
+					<!-- de 3 à 12 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[50].operation"
+								ng-init="tab[50].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > Plus de 100 mD > de 3 &aacute; 12 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,75" ng-model="tab[50].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[50].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[50].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="90"
+									max="365" ng-model="tab[50].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[50].echeanceSollicitee">
+							</div>
+						</div>
+
+						<button class="btn btn-success" ng-click="addProduitToList(50,'D41-D42','% +  NB Jours','HT','TMM - 0,75')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 12
+						mois à 24 mois</label> <br> <br>
+
+					<!-- plus de 12 mois à 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[51].operation"
+								ng-init="tab[51].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > Plus de 100 mD > plus de 12 mois &aacute;   24 mois'"
+								hidden="">
+
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control" placeholder="TMM - 0,5"
+									ng-model="tab[51].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[51].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[51].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="366"
+									max="720" ng-model="tab[51].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[51].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(51,'D47-D48','% +  NB Jours','HT','TMM - 0,5')">Ajouter
+							produit</button>
+					</form>
+
+
+
+					<br> <br> <label style="font-size: 20px"><i
+						class="fa fa-chevron-right" aria-hidden="true"></i> plus de 24
+						mois</label> <br> <br>
+					<!-- plus de 24 mois -->
+					<form>
+						<div class="row form-group" style="margin-left: 4%">
+							<input ng-model="tab[52].operation"
+								ng-init="tab[52].operation='OPERATIONS DOMESTIQUES > Placements : Compte &agrave; terme, Bon de caisse, Compte &agrave; Ech&eacute;ance Variable > Compte &aacute; &eacute;ch&eacute;ance variable > Plus de 100 mD > plus de 24 mois'"
+								hidden="">
+
+							<div class="col-lg-2">
+								<label>Tarif <br> Standard
+								</label> <input type="text" class="form-control"
+									placeholder="TMM - 0,375" ng-model="tab[52].tarifStandard"
+									readonly>
+							</div>
+
+							<div class="col-lg-3">
+								<label>Tarif <br> Sollicité
+								</label>
+								<div class="input-group">
+									<div class="input-group-addon">TMM</div>
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" ng-model="tab[52].valeur">
+									<div class="input-group-addon">%</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Montant du <br>placement
+								</label>
+								<div class="input-group">
+									<input type="number" step="0.001" class="form-control"
+										placeholder="0,000" min="1000" max="9999"
+										ng-model="tab[52].montantPlacement">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<label>Nbr jours du placement</label> <input type="number"
+									step="0.001" class="form-control" placeholder="0,000" min="721"
+									max="1800" ng-model="tab[52].nbrJoursPlacement">
+							</div>
+
+							<div class="col-lg-2">
+								<label>Echéance <br>sollicitée
+								</label> <input id="textinput" name="textinput" type="date"
+									placeholder="" class="form-control input-md"
+									ng-model="tab[52].echeanceSollicitee">
+							</div>
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(52,'D51','% +  NB Jours','HT','TMM - 0,375')">Ajouter
+							produit</button>
+					</form>
+
+					<br> <br>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+		<!-- C- Opérations sur effets : -->
+		<div id="IC" hidden="">
+			<legend style="color: #286090;"> I- OPERATIONS DOMESTIQUES >
+				C- Opérations sur effets :</legend>
+			<div class="IC1">
+				<!-- C-1- Effets à l'encaissement -->
+				<div class="C-1- Effets à l'encaissement ">
+					<!-- C-1- Effets à l'encaissement  -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Effets à
+						l'encaissement
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[53].operation"
+								ng-init="tab[53].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations sur effets > Effets &aacute; l encaissement '"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="3,5 DT"
+									ng-model="tab[53].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="3.5"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[53].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[53].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(53,'A96-A97-A98-A99-A100','MNT','HT','3,5 DT','Effet')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IC2">
+				<!-- C-2- Effets à l'encaissement compensés manuellement -->
+				<div class="C-2- Effets à l'encaissement compensés manuellement">
+					<!--C-2- Effets à l'encaissement compensés manuellement  -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Effets à
+						l'encaissement compensés manuellement
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[54].operation"
+								ng-init="tab[54].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations sur effets > Effets &aacute; l encaissement compens&eacute;s manuellement'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="5 DT"
+									ng-model="tab[54].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="5" class="form-control"
+										placeholder="0,000" ng-model="tab[54].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[54].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(54,'A101-A102','MNT','HT','5 DT','Effet')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IC3">
+				<!--C-3- Effets escomptés-->
+				<div class="C-3- Effets escomptés">
+					<!--C-3- Effets escomptés  -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Effets
+						escomptés
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[55].operation"
+								ng-init="tab[55].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations sur effets > Effets escompt&eacute;s'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="3,5 DT"
+									ng-model="tab[55].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="3.5"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[55].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[55].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(55,'A103-A104-A105-A106-A107-A108-A109-A110-A111-112','MNT','HT','3,5 DT','Effet')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IC4">
+				<!--C-4- Effets compensés manuellement-->
+				<div class="C-4- Effets compensés manuellement">
+					<!--C-4- Effets compensés manuellement -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Effets
+						compensés manuellement
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[56].operation"
+								ng-init="tab[56].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations sur effets > Effets compens&eacute;s manuellement'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="5 DT"
+									ng-model="tab[56].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="5" class="form-control"
+										placeholder="0,000" ng-model="tab[56].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[56].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(56,'A113-A114-A115-A116','MNT','HT','5 DT','Effet')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IC5">
+				<!--C-5- Frais sur effet impayé-->
+				<div class="C-5- Frais sur effet impayé">
+					<!--C-5- Frais sur effet impayé -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Frais sur
+						effet impayé
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[57].operation"
+								ng-init="tab[57].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations sur effets > Frais sur effet impay&eacute;'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="7 DT"
+									ng-model="tab[57].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="7" class="form-control"
+										placeholder="0,000" ng-model="tab[57].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[57].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(57,'A65-A66-A67-A68-A69-A70-A71-A72-A73-A74-A75-A76-A77-A78-A79-A80-A81-A82-A83-A84-A85-A86-A87-A88-A89-A90-A91','MNT','HT','7 DT','Effet')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IC6">
+				<!--C-6- Règlement d'effets et obligations-->
+				<div class="C-6- Règlement d'effets et obligations">
+					<!--C-6- Règlement d'effets et obligations -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Règlement
+						d'effets et obligations
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[58].operation"
+								ng-init="tab[58].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations sur effets > R&egrave;glement d effets et obligations'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="3 DT"
+									ng-model="tab[58].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="3" class="form-control"
+										placeholder="0,000" ng-model="tab[58].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[58].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(58,'A54-A55-A56-A57-A58-A59-A60-A61-A62','MNT','HT','3 DT','Effet')">Ajouter
+							produit</button>
+					</form>
+				</div>
+				<br> <br>
+			</div>
+			<div class="IC7">
+				<!--C-7- Remise d'effets au protêt-->
+				<div class="C-7- Remise d'effets au protêt">
+					<!--C-7- Remise d'effets au protêt-->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Remise
+						d'effets au protêt
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[59].operation"
+								ng-init="tab[59].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations sur effets > Remise d effets au prot&ecirc;t'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="15 DT"
+									ng-model="tab[59].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="15" class="form-control"
+										placeholder="0,000" ng-model="tab[59].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[59].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(59,'A118-A119-A120-A121-A122-A123-A124-A125-A126-A127-A128-A129-A130-A131','MNT','HT','15 DT','Effet')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- D- Opérations par chèque en dinars ou dinars convertibles -->
+		<div id="ID" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				D- Opérations par chèque en dinars ou dinars convertibles</legend>
+			<div class="ID1">
+				<!-- D-1- Encaissement de chèques -->
+				<div class="D-1- Encaissement de chèques ">
+					<!--D-1- Encaissement de chèques -->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Encaissement
+						de chèques
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[60].operation"
+								ng-init="tab[60].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations par ch&egrave;que en dinars ou dinars convertibles > Encaissement de ch&egrave;ques'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="0,650 DT(Frais fixe SIBTEL = 0,095DT)"
+									ng-model="tab[60].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="0.65"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[60].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[60].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(60,'A1','MNT','HT','0,650 DT(Frais fixe SIBTEL = 0,095DT)','Cheque')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="ID2">
+				<!-- D-2- Récupération de frais sur chèque retourné impayé -->
+				<div class="D-2- Récupération de frais sur chèque retourné impayé">
+					<!--D-2- Récupération de frais sur chèque retourné impayé-->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Récupération
+						de frais sur chèque retourné impayé
+					</label>
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[61].operation"
+								ng-init="tab[61].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations par ch&egrave;que en dinars ou dinars convertibles > R&eacute;cup&eacute;ration de frais sur ch&egrave;que retourn&eacute; impay&eacute;'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="5 DT"
+									ng-model="tab[61].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="5" class="form-control"
+										placeholder="0,000" ng-model="tab[61].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[61].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(61,'A31-A32-A33-A34','MNT','HT','5 DT','Cheque')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="ID3">
+				<!-- D-3- Cheques certifiés (demande faite auprès d’une même agence)-->
+				<div
+					class="D-3- Cheques certifiés (demande faite auprès d’une même agence)">
+					<!--D-3- Cheques certifiés (demande faite auprès d’une même agence)-->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Cheques
+						certifiés (demande faite auprès d’une même agence)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[62].operation"
+								ng-init="tab[62].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations par ch&egrave;que en dinars ou dinars convertibles > Cheques certifies (demande faite aupr&egrave;s d une meme agence)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="6,5 DT"
+									ng-model="tab[62].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="6.5"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[62].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[62].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(62,'A24','MNT','HT','6,5 DT','Cheque')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="ID4">
+				<!-- D-4- Cheques certifiés (demande faite auprès d’une autre agence)-->
+				<div
+					class="D-4- Cheques certifiés (demande faite auprès d’une autre agence)">
+					<!--D-4- Cheques certifiés (demande faite auprès d’une autre agence)-->
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Cheques
+						certifiés (demande faite auprès d’une autre agence)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[63].operation"
+								ng-init="tab[63].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations par ch&egrave;que en dinars ou dinars convertibles > Cheques certifies (demande faite aupr&egrave;s d une autre agence)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="8,5 DT"
+									ng-model="tab[63].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="8.5"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[63].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[63].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(63,'A25','MNT','HT','8,5 DT','Cheque')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="ID5">
+				<!-- D-5- Commission sur préavis de non paiement de chèque-->
+				<div class="D-5- Commission sur préavis de non paiement de chèque">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Commission sur
+						préavis de non paiement de chèque
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[64].operation"
+								ng-init="tab[64].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations par ch&egrave;que en dinars ou dinars convertibles > Commission sur pr&eacute;avis de non paiement de ch&egrave;que'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="60 DT"
+									ng-model="tab[64].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="60" class="form-control"
+										placeholder="0,000" ng-model="tab[64].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[64].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(64,'A28-A29-A30','MNT','HT','60 DT','Cheque')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="ID6">
+				<!-- D-6- Récupération de frais sur chèque impayé régularisé en CNP -->
+				<div
+					class="D-6- Récupération de frais sur chèque impayé régularisé en CNP ">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Récupération
+						de frais sur chèque impayé régularisé en CNP
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[65].operation"
+								ng-init="tab[65].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations par ch&egrave;que en dinars ou dinars convertibles > R&eacute;cup&eacute;ration de frais sur ch&egrave;que impay&eacute; r&eacute;gularis&eacute; en CNP'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="60 DT"
+									ng-model="tab[65].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="60" class="form-control"
+										placeholder="0,000" ng-model="tab[65].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[65].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(65,'A35-A36-A37-A38-A39-A40','MNT','HT','60 DT','Cheque')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="ID7">
+				<!--D-7- Mise en opposition chèque-->
+				<div class="D-7- Mise en opposition chèque">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Mise en
+						opposition chèque
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[66].operation"
+								ng-init="tab[66].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations par ch&egrave;que en dinars ou dinars convertibles > Mise en opposition ch&egrave;que'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="60 DT"
+									ng-model="tab[66].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="60" class="form-control"
+										placeholder="0,000" ng-model="tab[66].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[66].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(66,'A26','MNT','HT','30 DT','Opération')">Ajouter
+							produit</button>
+						
+						</form>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- E- Opérations virements domestiques & prélèvement-->
+		<div id="IE" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				E- Opérations virements domestiques & prélèvement</legend>
+			<div class="IE1">
+				<!--E-1- Virement émis simple inter-UIB -->
+				<div class="E-1- Virement émis simple inter-UIB">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Virement émis
+						simple inter-UIB
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[67].operation"
+								ng-init="tab[67].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations virements domestiques & pr&eacute;l&egrave;vement > Virement &eacute;mis simple inter-UIB'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="1,5 DT"
+									ng-model="tab[67].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="1.5"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[67].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[67].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(67,'A2-A3-A4-A5','MNT','HT','1,5 DT','Virement')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IE2">
+				<!--E-2- Virement émis simple interbancaire sur place -->
+				<div class="E-2- Virement émis simple interbancaire sur place">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Virement émis
+						simple interbancaire sur place
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[68].operation"
+								ng-init="tab[68].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations virements domestiques & pr&eacute;l&egrave;vement > Virement &eacute;mis simple interbancaire sur place'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="1,8 DT"
+									ng-model="tab[68].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="1.8"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[68].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[68].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(68,'A6-A7-A8-A12-A13','MNT','HT','1,8 DT','Virement')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IE3">
+				<!--E-3- Virement émis multiple support électronique -->
+				<div class="E-3- Virement émis multiple support électronique">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Virement émis
+						multiple support électronique
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[69].operation"
+								ng-init="tab[69].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations virements domestiques & pr&eacute;l&egrave;vement > Virement &eacute;mis multiple support &eacute;lectronique'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="20 DT"
+									ng-model="tab[69].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="20" class="form-control"
+										placeholder="0,000" ng-model="tab[69].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[69].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(69,'A9-A10-A11','MNT','HT','20 DT','Liste')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IE4">
+				<!--E-4- Virements reçus -->
+				<div class="E-4- Virements reçus">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Virements
+						reçus
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[70].operation"
+								ng-init="tab[70].operation='OPERATIONS DOMESTIQUES > Op&eacute;rations virements domestiques & pr&eacute;l&egrave;vement > Virements recus'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="1,2 DT"
+									ng-model="tab[70].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="1.2"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[70].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[70].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(70,'A14-A15-A16-A17-A18-A19-A20-A21-A22-A23','MNT','HT','1,2 DT','Virement')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+		<!--F- Autres opérations domestiques (retrait, versement, extrait)-->
+		<div id="IF" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				F- Autres opérations domestiques (retrait, versement, extrait)</legend>
+			<div class="IF1">
+				<!--F-1- Versement espèces déplacé -->
+				<div class="E-1- Virement émis simple inter-UIB">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Versement
+						espèces déplacé
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[71].operation"
+								ng-init="tab[71].operation='OPERATIONS DOMESTIQUES > Autres op&eacute;rations domestiques (retrait, versement, extrait) > Versement esp&egrave;ces d&eacute;plac&eacute;'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="0,8 DT"
+									ng-model="tab[71].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="0.8"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[71].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[71].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(71,'A92','MNT','HT','0,8 DT','Opération')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IF2">
+				<!--F-2- Retrait espèces déplacé (Y compris ceux effectués par les porteurs d'un chèque) -->
+				<div
+					class="F-2- Retrait espèces déplacé (Y compris ceux effectués par les porteurs d'un chèque)">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Retrait
+						espèces déplacé (Y compris ceux effectués par les porteurs d'un
+						chèque)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[72].operation"
+								ng-init="tab[72].operation='OPERATIONS DOMESTIQUES > Autres op&eacute;rations domestiques (retrait, versement, extrait) > Retrait esp&egrave;ces d&eacute;plac&eacute; (Y compris ceux eff&eacute;ctu&eacute;s par les porteurs d un ch&egrave;que)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="4 DT"
+									ng-model="tab[72].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="4" class="form-control"
+										placeholder="0,000" ng-model="tab[72].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[72].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(72,'A93-A94-A95','MNT','HT','4 DT','Opération')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IF3">
+				<!--F-3- Frais / Edition Extrait de Compte en Agence -->
+				<div class="F-3- Frais / Edition Extrait de Compte en Agence">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Frais /
+						Edition Extrait de Compte en Agence
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[73].operation"
+								ng-init="tab[73].operation='OPERATIONS DOMESTIQUES > Autres op&eacute;rations domestiques (retrait, versement, extrait) > Frais / Edition Extrait de Compte en Agence'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="0,423 DT"
+									ng-model="tab[73].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="0.423"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[73].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[73].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(73,'A208','MNT','HT','0,423 DT','Demande')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- G- Location de coffre-fort -->
+		<div id="IG" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				G- Location de coffre-fort</legend>
+			<div class="IG1">
+				<!--G-1- Coffre Fort Petit Format (PF) -->
+				<div class="G-1- Coffre Fort Petit Format (PF)">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Coffre Fort
+						Petit Format (PF)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[74].operation"
+								ng-init="tab[74].operation='OPERATIONS DOMESTIQUES > Location de coffre-fort > Coffre Fort Petit Format (PF)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="250 DT / an"
+									ng-model="tab[74].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="250"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[74].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[74].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(74,'A211','MNT','HT','250 DT / an','Coffre-fort')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IG2">
+				<!--G-2- Coffre Fort Moyen Format (MF)-->
+				<div class="G-2- Coffre Fort Moyen Format (MF)">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Coffre Fort
+						Moyen Format (MF)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[75].operation"
+								ng-init="tab[75].operation='OPERATIONS DOMESTIQUES > Location de coffre-fort > Coffre Fort Moyen Format (MF)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="300 DT / an"
+									ng-model="tab[75].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="300"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[75].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[75].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(75,'A212','MNT','HT','300 DT / an','Coffre-fort')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IG3">
+				<!--G-3- Coffre Fort Grand Format (GF)-->
+				<div class="G-3- Coffre Fort Grand Format (GF)">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Coffre Fort
+						Grand Format (GF)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[76].operation"
+								ng-init="tab[76].operation='OPERATIONS DOMESTIQUES > Location de coffre-fort > Coffre Fort Grand Format (GF)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="350 DT / an"
+									ng-model="tab[76].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="350"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[76].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[76].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(76,'A213','MNT','HT','350 DT / an','Coffre-fort')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+
+		<!-- H- Offres packagées -->
+		<div id="IH" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				H- Offres packagées</legend>
+			<div class="IH1">
+				<!--H-1- KIT Messa’Gek Visa Electron -->
+				<div class="H-1- KIT Messa’Gek Visa Electron">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Messa’Gek
+						Visa Electron
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[77].operation"
+								ng-init="tab[77].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Messa Gek Visa Electron'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="8,900 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[77].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[77].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[77].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(77,'E1','MNT','TTC','8,900 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH2">
+				<!--H-2- KIT Messa’Gek Mastercard Nationale -->
+				<div class="H-2- KIT Messa’Gek Mastercard Nationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Messa’Gek
+						Mastercard Nationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[78].operation"
+								ng-init="tab[78].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Messa’Gek Mastercard Nationale'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="11,800 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[78].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[78].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[78].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(78,'E4','MNT','TTC','11,800 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH3">
+				<!--H-3- KIT Messa’Gek Oxygène -->
+				<div class="H-3- KIT Messa’Gek Oxygène">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Messa’Gek
+						Oxygène
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[79].operation"
+								ng-init="tab[79].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > H-3- KIT MessaGek Oxyg&egrave;ne'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="11,100 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[79].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[79].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[79].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(79,'E7','MNT','TTC','11,100 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH4">
+				<!--H-4- KIT UIBnet Visa Electron -->
+				<div class="H-4- KIT UIBnet Visa Electron">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT UIBnet
+						Visa Electron
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[80].operation"
+								ng-init="tab[80].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT UIBnet Visa Electron'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="9,400 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[80].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[80].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[80].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(80,'E2','MNT','TTC','9,400 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH5">
+				<!--H-5- KIT UIBnet Mastercard Nationale -->
+				<div class="H-5- KIT UIBnet Mastercard Nationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT UIBnet
+						Mastercard Nationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[81].operation"
+								ng-init="tab[81].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT UIBnet Mastercard Nationale'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="12,200 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[81].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[81].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[81].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(81,'E5','MNT','TTC','12,200 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH6">
+				<!--H-6- KIT UIBnet Oxygène-->
+				<div class="H-6- KIT UIBnet Oxygène">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT UIBnet
+						Oxygène
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[82].operation"
+								ng-init="tab[82].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT UIBnet Oxyg&egrave;ne'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="11,600 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[82].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[82].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[82].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(82,'E8','MNT','TTC','11,600 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH7">
+				<!--H-7- KIT Messa’Gek + UIBnet Visa Electron-->
+				<div class="H-7- KIT Messa’Gek + UIBnet Visa Electron">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Messa’Gek
+						+ UIBnet Visa Electron
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[83].operation"
+								ng-init="tab[83].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Messa’Gek + UIBnet Visa Electron'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="12,200 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[83].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[83].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[83].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(83,'E3','MNT','TTC','12,200 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH8">
+				<!--H-8- KIT Messa’Gek + UIBnet Mastercard Nationale -->
+				<div class="H-8- KIT Messa’Gek + UIBnet Mastercard Nationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Messa’Gek
+						+ UIBnet Mastercard Nationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[84].operation"
+								ng-init="tab[84].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT MessaGek + UIBnet Mastercard Nationale'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="15,000 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[84].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[84].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[84].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(84,'E6','MNT','TTC','15,000 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH9">
+				<div class="H-9- KIT Messa’Gek + UIBnet Oxygène">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Messa’Gek
+						+ UIBnet Oxygène
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[85].operation"
+								ng-init="tab[85].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT MessaGek + UIBnet Oxyg&egrave;ne'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="14,400 DT TTC frais fixes= 0,787DT"
+									ng-model="tab[85].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[85].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[85].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(85,'E9','MNT','TTC','14,400 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH10">
+				<div class="H-10- KIT Pro Messa’Gek Pro Business Nationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Pro
+						Messa’Gek Pro Business Nationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[86].operation"
+								ng-init="tab[86].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Pro MessaGek Pro Business Nationale'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="25,300 DT TTC frais fixes=2,644DT"
+									ng-model="tab[86].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[86].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[86].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(86,'E10','MNT','TTC','25,300 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH11">
+				<div class="H-11- KIT Pro Messa’Gek Pro BusinessInternationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Pro
+						Messa’Gek Pro BusinessInternationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[87].operation"
+								ng-init="tab[87].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Pro MessaGek Pro BusinessInternationale'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="26,900 DT TTC frais fixes=2,644DT"
+									ng-model="tab[87].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[87].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[87].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(87,'E13','MNT','TTC','26,900 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH12">
+				<!--H-12- KIT Pro UIBnet Business Nationale -->
+				<div class="H-12- KIT Pro UIBnet Business Nationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Pro UIBnet
+						Business Nationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[88].operation"
+								ng-init="tab[88].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Messa Gek Visa Electron'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="22,700 DT TTC frais fixes=2,644DT"
+									ng-model="tab[88].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[88].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[88].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(88,'E11','MNT','TTC','22,700 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH13">
+				<div class="H-13- KIT Pro UIBnet BusinessInternationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Pro UIBnet
+						BusinessInternationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[89].operation"
+								ng-init="tab[89].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Pro UIBnet BusinessInternationale'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="24,300 DT TTC frais fixes=2,644DT"
+									ng-model="tab[89].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[89].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[89].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(89,'E14','MNT','TTC','24,300 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH14">
+				<div class="H-14- KIT Pro Messa’Gek Pro + UIBnet Business Nationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Pro
+						Messa’Gek Pro + UIBnet Business Nationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[90].operation"
+								ng-init="tab[90].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Pro MessaGek Pro + UIBnet Business Nationale'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="31,000 DT TTC frais fixes=2,644DT"
+									ng-model="tab[90].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[90].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[90].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(90,'E12','MNT','TTC','31,000 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH15">
+				<div
+					class="H-15- KIT Pro Messa’Gek Pro+UIBnet BusinessInternationale">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> KIT Pro
+						Messa’Gek Pro+UIBnet BusinessInternationale
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[91].operation"
+								ng-init="tab[91].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > KIT Pro MessaGek Pro+UIBnet BusinessInternationale'"
+								hidden="">
+
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="32,600 DT TTC frais fixes=2,644DT"
+									ng-model="tab[91].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Valeur Sollicitée</label> <select placeholder="%"
+									ng-model="tab[91].pourcentageKit" class="form-control input-md">
+									<option ng-value="25">25%</option>
+									<option ng-value="50">50%</option>
+									<option ng-value="75">75%</option>
+								</select>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[91].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(91,'E15','MNT','TTC','32,600 DT TTC','Abonnement / mois')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH16">
+				<div class="H-16- Pack PLATINE">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Pack PLATINE
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[92].operation"
+								ng-init="tab[92].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > Pack PLATINE'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="51,300 DT"
+									ng-model="tab[92].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="51.3"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[92].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[92].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(92,'A47','MNT','HT','51,300 DT','Abonnement / trimestre')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH17">
+				<div class="H-17- Pack PLATINEINR">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Pack
+						PLATINEINR
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[93].operation"
+								ng-init="tab[93].operation='OPERATIONS DOMESTIQUES > Offres packag&eacute;es > Pack PLATINEINR'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="51,300 DT"
+									ng-model="tab[93].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="51.3"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[93].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[93].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(93,'A48','MNT','HT','51,300 DT','Abonnement / trimestre')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH18">
+				<div class="H-18- Pack PLATINE Dinars Convertibles">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Pack PLATINE
+						Dinars Convertibles
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[94].operation"
+								ng-init="tab[94].operation='OPERATIONS DOMESTIQUES > Location de coffre-fort > Pack PLATINE Dinars Convertibles'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="58,050 DT"
+									ng-model="tab[94].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="58.05"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[94].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[94].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(94,'A49','MNT','HT','58,050 DT','Abonnement / trimestre')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="IH19">
+				<div class="H-19- Pack PLATINE Devises">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> Pack PLATINE
+						Devises
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[95].operation"
+								ng-init="tab[95].operation='OPERATIONS DOMESTIQUES > Location de coffre-fort > Pack PLATINE Devises'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="45,450 DT"
+									ng-model="tab[95].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="45.45"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[95].valeur">
+
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[95].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(95,'A50','MNT','HT','45,450 DT','Abonnement / trimestre')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+		<!-- I- Banque à distance -->
+		<div id="Ii" hidden="">
+			<legend style="color: #286090;">I- OPERATIONS DOMESTIQUES >
+				I- Banque à distance</legend>
+			<div class="Ii1">
+				<div class="I-1- MESSA’GEK Pro (SMS Banking pour CLICOM)">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> MESSA’GEK Pro
+						(SMS Banking pour CLICOM)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[96].operation"
+								ng-init="tab[96].operation='OPERATIONS DOMESTIQUES > Banque à distance > MESSA GEK Pro (SMS Banking pour CLICOM)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control"
+									placeholder="10 DT TTC / mois (Frais fixe 0,450DT)"
+									ng-model="tab[96].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="10" class="form-control"
+										placeholder="0,000" ng-model="tab[96].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[96].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(96,'A41','MNT','TTC','10 DT TTC / mois (Frais fixe 0,450DT)','Abonnement')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="Ii2">
+				<div class="I-2- UIBnet (Internet Banking pour CLIPRI)">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> UIBnet
+						(Internet Banking pour CLIPRI)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[97].operation"
+								ng-init="tab[97].operation='OPERATIONS DOMESTIQUES > Banque à distance > UIBnet (Internet Banking pour CLIPRI)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="3,500 DT HT / mois"
+									ng-model="tab[97].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="3.5"
+										class="form-control" placeholder="0,000"
+										ng-model="tab[97].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[97].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(97,'A45','MNT','HT','3,500 DT HT / mois','Abonnement')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+			<div class="Ii3">
+				<div
+					class="I-3- UIBnet Pro (Internet Banking pour CLIPRO et CLICOM)">
+					<label style="font-size: 20px"> <i
+						class="fa fa-chevron-right" aria-hidden="true"></i> UIBnet Pro
+						(Internet Banking pour CLIPRO et CLICOM)
+					</label>
+
+					<form>
+						<div class="row form-group">
+							<input ng-model="tab[98].operation"
+								ng-init="tab[98].operation='OPERATIONS DOMESTIQUES > Banque à distance > UIBnet Pro (Internet Banking pour CLIPRO et CLICOM)'"
+								hidden="">
+							<div class="col-lg-4">
+								<label>Tarif Standard</label> <input type="text"
+									class="form-control" placeholder="70 DT HT / an"
+									ng-model="tab[98].tarifStandard" readonly>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Tarif Sollicité</label>
+								<div class="input-group">
+									<input type="number" step="0.001" max="70" class="form-control"
+										placeholder="0,000" ng-model="tab[98].valeur">
+									<div class="input-group-addon">DT</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<label>Echéance sollicitée</label> <input id="textinput"
+									name="textinput" type="date" placeholder=""
+									class="form-control input-md"
+									ng-model="tab[98].echeanceSollicitee">
+							</div>
+
+						</div>
+						<button class="btn btn-success" ng-click="addProduitToList(98,'A43-A44','MNT','HT','70 DT HT / an','Abonnement')">Ajouter
+							produit</button>
+					</form>
+				</div>
+
+				<br> <br>
+			</div>
+		</div>
+
+		<!-- Button -->
+		<div class="form-group">
+			<label class="col-md-6 control-label" for="singlebutton"></label>
+			<div class="col-md-6">
+				<input type="submit" value="Submit" class="blue-button"
+					ng-click="submitProduits()" />
+			</div>
+		</div>
+		<!-- 				</fieldset>
+			</form>
+		-->
+	</div>
+</div>

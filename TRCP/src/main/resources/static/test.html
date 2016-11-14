@@ -1,0 +1,30 @@
+ 
+<div ng-controller="ProduitService">
+
+    
+    <button ng-click="clickToOpen()">My Modal</button>
+    
+
+    <script type="text/ng-template" id="popUpEnCours">
+
+        <div id="target" ng-click="popUp()" ng-controller="ProduitService">
+          Traitement en cours
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="popUpOperationReussie">
+
+        <div id="target" ng-click="popUp()" ng-controller="ProduitService">
+          Opération réussie
+        </div>
+    </script>
+    
+
+    <script type="text/ng-template" id="popUpDoesntExist">
+
+        <div id="target" ng-click="popUp()" ng-controller="ProduitService">
+          Réference n existe pas
+        </div>
+    </script>
+    
+</div>

@@ -1,0 +1,45 @@
+<div >
+	<h1>Demande</h1>
+	<p>{{cheminPDF}}</p>
+	<br>
+	<object data="{{cheminPDF}}" type="application/pdf" width="100%" height="800px"> 
+  		<a href="{{cheminPDF}}"></a>
+ 	</object>
+
+ 	<object data="assets/DUD/{{referenceDemande}}.pdf" type="application/pdf" width="100%" height="800px"> 
+  		<a href="assets/DUD/{{referenceDemande}}.pdf"></a>
+ 	</object>
+
+
+	<!-- <table class="table table-hover">
+		<tr>
+			<td>refDemande</td>
+			<td>operation</td>
+			<td>tarif sollicité</td>
+			<td>échéance sollicitée</td>
+			<td>montant placement</td>
+			<td>nbr jours placement</td>
+			<td>pourcentage kit</td>
+		</tr>  
+		<tr ng-repeat="produit in produits">  
+				<td>{{produit.referenceDemande}}</td>  
+				<td>{{produit.operation}}</td>  
+				<td>{{produit.tarifSollicite}}</td>  
+				<td>{{produit.echeanceSollicitee}}</td>  
+				<td>{{produit.montantPlacement}}</td>  
+				<td>{{produit.nbrJoursPlacement}}</td>  
+				<td>{{produit.pourcentageKit}}</td>  
+				
+		</tr>
+	</table>  -->
+	<!--
+	<script type="text/javascript">
+		function imprimer_page(){
+		  window.print();
+		}
+	</script>    
+	<form>
+	  <input id="impression" name="impression" type="button" onclick="window.print();" value="Imprimer cette page" />
+	</form>
+	-->
+</div>
